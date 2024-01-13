@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.icon-animated {
+	width: 90px;
+	height: 90px;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  transform: scale(1.5);
+	position:absolute;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.icon-animated .tick svg {
+	position: absolute;
+	left: 22px;
+	right: 0;
+	top: 12px;
+	bottom: 0;
+	fill: #fff;
+	width: 25px;
+    height: 52px;
+}
+
+.icon-animated-tick .circle {
+	fill: #60D154;
+	animation-fill-mode: forwards;
+    animation-name: circle-pulse;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+.tick-leg1 {
+	fill: #fff;
+	animation-fill-mode: forwards;
+    animation-name: tick-swipe1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transform: scaleX(0);
+    transform-origin: left bottom;
+	opacity: 0;
+}
+
+.tick-leg2 {
+	fill: #fff;
+	animation-fill-mode: forwards;
+    animation-name: tick-swipe2;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    transform: scaleY(0);
+    transform-origin: right bottom;
+	opacity: 0;
+}
+h2{
+  margin-left: 70px;
+  font-size: 30px;
+}
+#rzp-button1{
+  margin-left: 49%;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 5px 30px;
+}
+#box{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  border: 2px solid black;
+  border-radius: 1pc;
+  height: 450px;
+  /* background-color: #60D154; */
+}
+#box img{
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  margin-left: 60px;
+  padding: 6px 4px;
+}
+#box h3{
+  padding: 2px 3.9px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 9px;
+  font-family: "gilroy";
+  letter-spacing: 0.0em;
+  line-height: 0.9em;
+
+}
+#box h2{
+  margin-top: 10px;
+  margin-left: 110px;
+}
+#box button{
+  margin-left: 120px;
+  background-color: #60D154;
+  color: #fff;
+}
+
+@keyframes tick-swipe1 {
+    0% {
+		opacity: 0;
+    }
+    10% {
+		opacity: 0.5;
+    }
+    20% {
+		opacity: 1;
+    }
+
+
+    100% {
+		opacity: 1;
+    	transform: scaleX(1);
+    }
+}
+
+@keyframes tick-swipe2 {
+	40% {
+		opacity: 0;
+	}
+    47% {
+    	transform: scaleY(0.15);
+		opacity: 1;
+    }
+    100% {
+    	transform: scaleY(1);
+		opacity: 1;
+    }
+}
+
+@keyframes circle-pulse {
+    0%, 25%, 75%, 100% {
+    	transform: scale(1);
+    }
+    50% {
+    	transform: scale(1.05);
+    }
+}
+
+.tick {
+	width: 100%;
+	height: 100%;
+	transform: rotate(45deg) scale(0.8);
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+    right: 0;
+}
+
+.tick-holder {
+	transform: scale(0.6);
+}
